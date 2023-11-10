@@ -1,0 +1,7 @@
+wheel
+click
+mutagen
+get_cover_art
+yt-dlp
+pytaglib
+py7zr
