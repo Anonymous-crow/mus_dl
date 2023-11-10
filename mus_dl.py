@@ -4,7 +4,7 @@ import os, yt_dlp, logging, get_cover_art, json, taglib, time, click
 def install_ffmpeg(overwrite=False):
     if os.name == 'nt':
         if not os.path.isfile('ffmpeg.exe') or overwrite:
-            if not os.path.isdir(os.path.join("resources","ffmpeg","release-full")): os.mkdir(os.path.join("resources","ffmpeg","release-full"))
+            if not os.path.isdir(os.path.join("resources","ffmpeg","release-full")): os.makedirs(os.path.join("resources","ffmpeg","release-full"))
             resp = requests.get('https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z', allow_redirects=True)
             with open(os.path.join('resources','ffmpeg','ffmpeg-release-full.7z'), "wb") as f:
                 f.write(resp.content)
